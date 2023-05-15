@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ page</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "Quicksand", sans-serif;
+            background-color: #ffffff;
+            color: #1c1c1c;
+        }
+        section {
+            min-height: 100vh;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .faqTitle{
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        .faq{
+            max-width: 700px;
+            margin-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #1c1c1c;
+            cursor: pointer;
+
+        }
+
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question h3{
+            font-size: 1.8rem;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+        }
+        .faq.show .answer{
+            max-height: 300px;
+        }
+        .answer p {
+            padding-top: 1rem;
+            line-height: 1.6;
+            font-size: 1.4rem;
+        }
+        ion-icon{
+            width: 30px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2 class="faqTitle">FAQs</h2>
+        <div class="faq">
+            <div class="question">
+                <h3>Question question</h3>
+
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="answer">
+                <p>
+                    Answer AnswerAnswerAnswerAnswer
+                    AnswerAnswerAnswerAnswerAnswer
+                    AnswerAnswerAnswerAnswer Answer
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3>Question question</h3>
+
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="answer">
+                <p>
+                    Answer AnswerAnswerAnswerAnswer
+                    AnswerAnswerAnswerAnswerAnswer
+                    AnswerAnswerAnswerAnswer Answer
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3>Question question</h3>
+
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="answer">
+                <p>
+                    Answer AnswerAnswerAnswerAnswer
+                    AnswerAnswerAnswerAnswerAnswer
+                    AnswerAnswerAnswerAnswer Answer
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        const faqs = document.querySelectorAll('.faq')
+
+        faqs.forEach(faq =>{
+            faq.addEventListener('click', function(){
+                faq.classList.toggle('show')
+            })
+        })
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
